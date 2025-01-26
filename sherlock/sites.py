@@ -111,7 +111,7 @@ class SitesInformation():
             # The default data file is the live data.json which is in the GitHub repo. The reason why we are using
             # this instead of the local one is so that the user has the most up to date data. This prevents
             # users from creating issue about false positives which has already been fixed or having outdated data
-            data_file_path = "https://raw.githubusercontent.com/sherlock-project/sherlock/master/sherlock/resources/data.json"
+            data_file_path = "https://raw.githubusercontent.com/trashkiid/sherlock/refs/heads/main/sherlock/resources/data.json"
 
         # Ensure that specified data file has correct extension.
         if not data_file_path.lower().endswith(".json"):
@@ -138,7 +138,7 @@ class SitesInformation():
                                         f"data file URL '{data_file_path}'."
                                        )
         else:
-            # Reference is to a file.
+            #Reference is to a file.
             try:
                 with open(data_file_path, "r", encoding="utf-8") as file:
                     try:
@@ -154,7 +154,7 @@ class SitesInformation():
 
         self.sites = {}
 
-        # Add all of site information from the json file to internal site list.
+        #Add all of site information from the json file to internal site list.
         for site_name in site_data:
             try:
 
